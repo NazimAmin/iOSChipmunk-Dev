@@ -11,22 +11,18 @@ import AVFoundation
 
 class PlaybackViewController: UIViewController {
     
+    @IBOutlet weak var playBackSnailButton: UIButton!
+    @IBOutlet weak var chipmunkButton: UIButton!
+    
+
     //Declared globally within PlaySoundsViewController
     var audioEngine: AVAudioEngine!
     var avAudioFile: AVAudioFile!
-    
-    @IBOutlet weak var playBackSnailButton: UIButton!
-    
-    //chipmunk effect button
-    
-    @IBOutlet weak var chipmunkButton: UIButton!
+    var recievedAudio: RecordedAudio!
     
     var audioPlayer:AVAudioPlayer!
     var newPauseImage = UIImage();
     var newPlayImage = UIImage();
-    
-    var recievedAudio: RecordedAudio!
-    
     
     override func viewDidLoad() {
         
@@ -117,6 +113,10 @@ class PlaybackViewController: UIViewController {
     
     //changing pitch for chipmunk
     
+    @IBAction func chipmunkEffect(sender: UIButton) {
+        playWithEffectPitch(1000.0)
+    }
+    
     func playWithEffectPitch(pitch: Float){
         audioPlayer.stop()
         audioEngine.stop()
@@ -132,13 +132,11 @@ class PlaybackViewController: UIViewController {
         audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
     
         audioPlayerNode.scheduleFile(avAudioFile, atTime: nil, completionHandler: nil)
+        audioEngine.startAndReturnError(nil)
         audioPlayerNode.play()
     }
     
     //chupmunkEffect func
     
-    @IBAction func chipmunkEffect(sender: UIButton) {
-        playWithEffectPitch(1000)
-    }
     
 }
