@@ -77,7 +77,7 @@ class PlaybackViewController: UIViewController {
     }
 
 
-    //this is a play audio fucntion for no-repetitive calls
+    //this is a play audio fucntion for non-repetitive calls
     func playAudio(speed: Float){
         if audioPlayer.playing{
             audioPlayer.stop()
@@ -88,6 +88,7 @@ class PlaybackViewController: UIViewController {
         audioPlayer.prepareToPlay()
         audioPlayer.play()
     }
+    
     @IBAction func playBackSnail(sender: UIButton) {
         playAudio(0.5)
     }
