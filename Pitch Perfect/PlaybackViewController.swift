@@ -46,6 +46,7 @@ class PlaybackViewController: UIViewController {
         else{
             println("the file path is empty\n");
         }*/
+        
         //audio engine obj
         audioEngine = AVAudioEngine()
         
@@ -66,7 +67,7 @@ class PlaybackViewController: UIViewController {
     }
     
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -75,7 +76,7 @@ class PlaybackViewController: UIViewController {
         // Pass the selected object to the new view controller.
         
     }
-
+    */
 
     //this is a play audio fucntion for non-repetitive calls
     func playAudio(speed: Float){
@@ -102,7 +103,7 @@ class PlaybackViewController: UIViewController {
             audioPlayer.currentTime = 0.0;
         }
     }
-    //this will pause any audio and then will change the icon dynamacilly to play and so forth
+    //this will pause any audio and then will change the icon dynamacilly to play and vice-versa
     @IBAction func pauseButton(sender: UIButton) {
         
         if(audioPlayer.playing){

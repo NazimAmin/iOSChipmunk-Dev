@@ -58,7 +58,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
 
     }
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
-        
+        println("breaking here on audioFinished")
         if(flag){
         //save the recorded audio
         recordedAudio = RecordedAudio()
@@ -80,6 +80,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
             let playSoundVC:PlaybackViewController = segue.destinationViewController as PlaybackViewController
             let data = sender as RecordedAudio
             playSoundVC.recievedAudio = data
+            println("breaking here on prepareForSegue")
         }
     }
     @IBAction func stopRecording(sender: UIButton) {

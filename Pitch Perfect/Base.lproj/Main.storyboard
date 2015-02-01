@@ -214,7 +214,6 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="chipmunk" destination="rXW-qX-W7s" id="PDI-Cb-Wih"/>
                         <outlet property="chipmunkButton" destination="rXW-qX-W7s" id="b5X-uM-Ysb"/>
                         <outlet property="playBackSnailButton" destination="iVe-ce-FFA" id="Q6Q-Xa-seC"/>
                     </connections>
