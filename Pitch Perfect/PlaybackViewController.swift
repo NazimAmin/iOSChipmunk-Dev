@@ -14,6 +14,7 @@ class PlaybackViewController: UIViewController {
     @IBOutlet weak var playBackSnailButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
     
+    @IBOutlet weak var DarthvaderButton: UIButton!
 
     //Declared globally within PlaySoundsViewController
     var audioEngine: AVAudioEngine!
@@ -117,6 +118,9 @@ class PlaybackViewController: UIViewController {
         playWithEffectPitch(1000.0)
     }
     
+    @IBAction func DarthvaderEffect(sender: UIButton) {
+        playWithEffectPitch(-1000)
+    }
     func playWithEffectPitch(pitch: Float){
         audioPlayer.stop()
         audioEngine.stop()
