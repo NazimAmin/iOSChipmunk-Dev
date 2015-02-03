@@ -126,15 +126,6 @@
                                     <action selector="fastPlayBack:" destination="25H-UV-rGB" eventType="touchUpInside" id="8Wn-vh-UGs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAR-jo-ylb">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="stopRecord">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="stopAllAudio:" destination="25H-UV-rGB" eventType="touchUpInside" id="U9m-q2-RC5"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qle-wO-iXM">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="pauseButton">
@@ -162,6 +153,15 @@
                                     <action selector="DarthvaderEffect:" destination="25H-UV-rGB" eventType="touchUpInside" id="QgL-nz-DZT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAR-jo-ylb">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stopRecord">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAllAudio:" destination="25H-UV-rGB" eventType="touchUpInside" id="U9m-q2-RC5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -175,7 +175,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="UqK-Cp-4SP" secondAttribute="trailing" constant="30" id="VkR-VE-5QM"/>
                             <constraint firstItem="rXW-qX-W7s" firstAttribute="top" secondItem="iVe-ce-FFA" secondAttribute="bottom" constant="51" id="aQg-GK-K5j"/>
                             <constraint firstItem="qle-wO-iXM" firstAttribute="leading" secondItem="qer-5P-Cii" secondAttribute="leadingMargin" constant="30" id="dCU-iL-NR7"/>
-                            <constraint firstItem="qle-wO-iXM" firstAttribute="top" secondItem="rXW-qX-W7s" secondAttribute="bottom" constant="51" id="gKx-2b-sPx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hAa-5h-8xq" secondAttribute="trailing" constant="30" id="lCy-Xv-6rQ"/>
                             <constraint firstItem="hAa-5h-8xq" firstAttribute="top" secondItem="UqK-Cp-4SP" secondAttribute="bottom" constant="51" id="n3Y-Wp-uMU"/>
                         </constraints>
@@ -183,50 +182,48 @@
                             <mask key="subviews">
                                 <exclude reference="iVe-ce-FFA"/>
                                 <exclude reference="UqK-Cp-4SP"/>
-                                <exclude reference="SAR-jo-ylb"/>
                                 <exclude reference="qle-wO-iXM"/>
                                 <exclude reference="rXW-qX-W7s"/>
                                 <exclude reference="hAa-5h-8xq"/>
+                                <exclude reference="SAR-jo-ylb"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="4zz-12-suI"/>
-                                <exclude reference="De4-qw-lPd"/>
-                                <exclude reference="Ako-xJ-c1p"/>
-                                <exclude reference="aQg-GK-K5j"/>
+                                <exclude reference="FmQ-Nd-PRD"/>
+                                <exclude reference="HLS-uf-GZf"/>
+                                <exclude reference="CHG-XR-5vC"/>
                                 <exclude reference="8Tj-Sw-0bW"/>
                                 <exclude reference="VkR-VE-5QM"/>
                                 <exclude reference="lCy-Xv-6rQ"/>
                                 <exclude reference="n3Y-Wp-uMU"/>
+                                <exclude reference="4zz-12-suI"/>
+                                <exclude reference="De4-qw-lPd"/>
                                 <exclude reference="dCU-iL-NR7"/>
-                                <exclude reference="gKx-2b-sPx"/>
-                                <exclude reference="CHG-XR-5vC"/>
-                                <exclude reference="FmQ-Nd-PRD"/>
-                                <exclude reference="HLS-uf-GZf"/>
+                                <exclude reference="Ako-xJ-c1p"/>
+                                <exclude reference="aQg-GK-K5j"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="iVe-ce-FFA"/>
                                 <include reference="UqK-Cp-4SP"/>
-                                <include reference="SAR-jo-ylb"/>
                                 <include reference="qle-wO-iXM"/>
                                 <include reference="rXW-qX-W7s"/>
                                 <include reference="hAa-5h-8xq"/>
+                                <include reference="SAR-jo-ylb"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="4zz-12-suI"/>
-                                <include reference="De4-qw-lPd"/>
-                                <include reference="Ako-xJ-c1p"/>
-                                <include reference="aQg-GK-K5j"/>
+                                <include reference="FmQ-Nd-PRD"/>
+                                <include reference="HLS-uf-GZf"/>
+                                <include reference="CHG-XR-5vC"/>
                                 <include reference="8Tj-Sw-0bW"/>
                                 <include reference="VkR-VE-5QM"/>
                                 <include reference="lCy-Xv-6rQ"/>
                                 <include reference="n3Y-Wp-uMU"/>
+                                <include reference="4zz-12-suI"/>
+                                <include reference="De4-qw-lPd"/>
                                 <include reference="dCU-iL-NR7"/>
-                                <include reference="gKx-2b-sPx"/>
-                                <include reference="CHG-XR-5vC"/>
-                                <include reference="FmQ-Nd-PRD"/>
-                                <include reference="HLS-uf-GZf"/>
+                                <include reference="Ako-xJ-c1p"/>
+                                <include reference="aQg-GK-K5j"/>
                             </mask>
                         </variation>
                     </view>

@@ -95,20 +95,22 @@ class PlaybackViewController: UIViewController {
     }
     
     @IBAction func stopAllAudio(sender: UIButton) {
-        if(audioPlayer.playing){
-            audioPlayer.stop();
-            audioPlayer.currentTime = 0.0;
+        if(audioPlayer.playing || audioEngine.running){
+            audioPlayer.stop()
+            audioEngine.stop()
+            audioPlayer.currentTime = 0.0
         }
     }
     //this will pause any audio and then will change the icon dynamacilly to play and vice-versa
     @IBAction func pauseButton(sender: UIButton) {
         
-        if(audioPlayer.playing){
-            audioPlayer.pause();
+        if(audioPlayer.playing || audioEngine.running){
+            audioPlayer.pause()
+            audioEngine.pause()
             sender.setImage(newPlayImage, forState: UIControlState.Normal);
         }else if (!audioPlayer.playing){
             sender.setImage(newPauseImage, forState: UIControlState.Normal)
-            audioPlayer.play();
+            audioPlayer.play()
         }
     }
     
@@ -139,8 +141,6 @@ class PlaybackViewController: UIViewController {
         audioEngine.startAndReturnError(nil)
         audioPlayerNode.play()
     }
-    
-    //chupmunkEffect func
     
     
 }
