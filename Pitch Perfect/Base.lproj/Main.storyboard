@@ -131,9 +131,6 @@
                                 <state key="normal" image="pauseButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="46" y="474" width="100" height="100"/>
-                                </variation>
                                 <connections>
                                     <action selector="pauseButton:" destination="25H-UV-rGB" eventType="touchUpInside" id="sjt-tG-e4H"/>
                                 </connections>
@@ -161,9 +158,6 @@
                                 <state key="normal" image="stopRecord">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="254" y="474" width="100" height="100"/>
-                                </variation>
                                 <connections>
                                     <action selector="stopAllAudio:" destination="25H-UV-rGB" eventType="touchUpInside" id="U9m-q2-RC5"/>
                                 </connections>
@@ -173,6 +167,9 @@
                                 <state key="normal" image="echoButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="150" y="329" width="100" height="100"/>
+                                </variation>
                                 <connections>
                                     <action selector="echoEffect:" destination="25H-UV-rGB" eventType="touchUpInside" id="Whn-BR-h2f"/>
                                 </connections>
@@ -184,17 +181,17 @@
                             <constraint firstItem="UqK-Cp-4SP" firstAttribute="top" secondItem="GsV-Cx-eco" secondAttribute="bottom" constant="35" id="8Tj-Sw-0bW"/>
                             <constraint firstItem="rXW-qX-W7s" firstAttribute="leading" secondItem="qer-5P-Cii" secondAttribute="leadingMargin" constant="30" id="Ako-xJ-c1p"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SAR-jo-ylb" secondAttribute="trailing" constant="30" id="CHG-XR-5vC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EwO-In-5dn" secondAttribute="trailing" constant="134" id="DWN-XZ-cg7"/>
                             <constraint firstItem="iVe-ce-FFA" firstAttribute="leading" secondItem="qer-5P-Cii" secondAttribute="leadingMargin" constant="30" id="De4-qw-lPd"/>
                             <constraint firstItem="SLC-A1-fws" firstAttribute="top" secondItem="SAR-jo-ylb" secondAttribute="bottom" constant="99" id="FmQ-Nd-PRD"/>
                             <constraint firstItem="SLC-A1-fws" firstAttribute="top" secondItem="qle-wO-iXM" secondAttribute="bottom" constant="99" id="HLS-uf-GZf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UqK-Cp-4SP" secondAttribute="trailing" constant="30" id="VkR-VE-5QM"/>
                             <constraint firstItem="rXW-qX-W7s" firstAttribute="top" secondItem="iVe-ce-FFA" secondAttribute="bottom" constant="51" id="aQg-GK-K5j"/>
                             <constraint firstAttribute="centerY" secondItem="EwO-In-5dn" secondAttribute="centerY" constant="-119" id="aZR-cJ-AWp"/>
+                            <constraint firstAttribute="centerX" secondItem="EwO-In-5dn" secondAttribute="centerX" id="bvR-Pg-rsX"/>
                             <constraint firstItem="qle-wO-iXM" firstAttribute="leading" secondItem="qer-5P-Cii" secondAttribute="leadingMargin" constant="30" id="dCU-iL-NR7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hAa-5h-8xq" secondAttribute="trailing" constant="30" id="lCy-Xv-6rQ"/>
                             <constraint firstItem="hAa-5h-8xq" firstAttribute="top" secondItem="UqK-Cp-4SP" secondAttribute="bottom" constant="51" id="n3Y-Wp-uMU"/>
-                            <constraint firstItem="SLC-A1-fws" firstAttribute="top" secondItem="EwO-In-5dn" secondAttribute="bottom" constant="131" id="olX-8l-k5u"/>
+                            <constraint firstAttribute="centerY" secondItem="EwO-In-5dn" secondAttribute="centerY" id="ufS-X2-CfN"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -215,13 +212,13 @@
                                 <exclude reference="VkR-VE-5QM"/>
                                 <exclude reference="lCy-Xv-6rQ"/>
                                 <exclude reference="n3Y-Wp-uMU"/>
-                                <exclude reference="DWN-XZ-cg7"/>
                                 <exclude reference="aZR-cJ-AWp"/>
+                                <exclude reference="bvR-Pg-rsX"/>
+                                <exclude reference="ufS-X2-CfN"/>
                                 <exclude reference="dCU-iL-NR7"/>
                                 <exclude reference="CHG-XR-5vC"/>
                                 <exclude reference="FmQ-Nd-PRD"/>
                                 <exclude reference="HLS-uf-GZf"/>
-                                <exclude reference="olX-8l-k5u"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -243,13 +240,13 @@
                                 <include reference="VkR-VE-5QM"/>
                                 <include reference="lCy-Xv-6rQ"/>
                                 <include reference="n3Y-Wp-uMU"/>
-                                <include reference="DWN-XZ-cg7"/>
                                 <include reference="aZR-cJ-AWp"/>
+                                <include reference="bvR-Pg-rsX"/>
+                                <include reference="ufS-X2-CfN"/>
                                 <include reference="dCU-iL-NR7"/>
                                 <include reference="CHG-XR-5vC"/>
                                 <include reference="FmQ-Nd-PRD"/>
                                 <include reference="HLS-uf-GZf"/>
-                                <include reference="olX-8l-k5u"/>
                             </mask>
                         </variation>
                     </view>
