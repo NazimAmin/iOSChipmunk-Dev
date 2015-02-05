@@ -14,6 +14,7 @@ class PlaybackViewController: UIViewController {
     @IBOutlet weak var playBackSnailButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
     
+    @IBOutlet weak var echoButton: UIButton!
     @IBOutlet weak var DarthvaderButton: UIButton!
 
     //Declared globally within PlaySoundsViewController
@@ -24,7 +25,9 @@ class PlaybackViewController: UIViewController {
     var audioPlayer:AVAudioPlayer!
     var newPauseImage = UIImage();
     var newPlayImage = UIImage();
+     var audioPlayerNode = AVAudioPlayerNode()
     
+    var newAudioPlayer:AVAudioPlayer!
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -56,6 +59,9 @@ class PlaybackViewController: UIViewController {
         //loading an image that I will change later in the function
         newPauseImage = UIImage(named: "pauseButton") as UIImage!
         newPlayImage = UIImage(named: "playButton") as UIImage!
+        newAudioPlayer = AVAudioPlayer(contentsOfURL: recievedAudio.filePathUrl, error: nil);
+        newAudioPlayer.prepareToPlay()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,6 +91,20 @@ class PlaybackViewController: UIViewController {
         audioPlayer.rate = speed
         audioPlayer.prepareToPlay()
         audioPlayer.play()
+    }
+    //echo effect
+    @IBAction func echoEffect(sender: UIButton) {
+   
+    
+        audioPlayer.stop()
+        audioPlayer.currentTime = 0.0
+        audioPlayer.play()
+        
+        var delay: NSTimeInterval = 0.2
+        var newPlayTime:NSTimeInterval
+        newPlayTime = newAudioPlayer.deviceCurrentTime + delay
+        newAudioPlayer.volume = 0.7
+        newAudioPlayer.playAtTime(newPlayTime)
     }
     
     @IBAction func playBackSnail(sender: UIButton) {
@@ -119,6 +139,7 @@ class PlaybackViewController: UIViewController {
     @IBAction func chipmunkEffect(sender: UIButton) {
         playWithEffectPitch(1000.0)
     }
+    
     
     @IBAction func DarthvaderEffect(sender: UIButton) {
         playWithEffectPitch(-1000)
